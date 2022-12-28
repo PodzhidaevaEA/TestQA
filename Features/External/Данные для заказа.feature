@@ -1,5 +1,6 @@
 ﻿#language: ru
-@дерево
+@IgnoreOnCIMainBuild
+@ExportScenarios
 
 Функционал: Данные для заказа
 
