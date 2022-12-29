@@ -1,0 +1,34 @@
+Перешла по другой ссылке в TC, который был указан в комментарии https://xn----1-bedvffifm4g.xn--p1ai/courses/1c-testing-qa-2022/module-03/
+
+т.к. если переходить по ссылке из урока, то закладка Артифакты пуста.
+
+
+Ссылка: https://dev.irpteam.com/tc/buildConfiguration/IRP_RunVA/37514?buildTab=artifacts#%2Fallure-report.zip
+
+Ошибка 1 - Empty snippet address of the step:
+При выполнении шага должна была нажаться кнопка ОК в открытом диалоговом окне, но к данному шагу не найден был сниппет.
+
+Ошибка 2 - Error calling context method (BeginPutFileToServer)
+При создании Extension был указан путь к файлу и нажата кнопка Add File. 
+Открылась форма создания, согласно следующему шагу нужно было заполнить поле Description, но появилась ошибка, что файл по указанному пути не найден.
+
+Ошибка 3 - Error calling context method (StartChoosing):
+При переходе к полю "Package unit" появилась ошибка, что поле "Unit" обязательное для заполнения, вследствие чего сценарий не смог продолжиться.
+После заполнения поля Unit, надо было сохранить объект.
+
+Ошибка 4 - Expected <The total amount of the "Cash transfer order" document(s) is already received on the basis of the "Bank receipt" document(s).> substring in user messages
+Согласно шагу, после создания документа Bank receipt ожидалось появление сообщения 'The total amount of the "Cash transfer order" document(s) is already received on the basis of the "Bank receipt" document(s).' в течении 30 сек, но оно не появилось.
+
+Ошибка 5 - Form table named <PaymentList> is not found.
+В документе Cash transfer order, согласно шагу, нужно было найти поле PaymentList и ввести значение Partner, но такого поля нет на форме документа.
+
+Ошибка 6 - One or more standard table lines are not found in the 
+При проверке заполнения табличной части Payments формы Bank receipt 
+ожидалось найти значения
+Amount = 500, 00
+Planning transaction basis = Cash transfer order 3 dated 24.05.2022 12:47:35
+Фактически в табличной части поле Amount было пустым, вследствие чего возникла ошибка.
+
+Ошибка 7 - Unable to move to the required line in <List> table.
+При создании записи в справочнике Hardware шаг преполагал заполнение поля "Workstation" значением "Workstation 01", но запись не была найдена, т.к. список Workstations пуст.
+ 
